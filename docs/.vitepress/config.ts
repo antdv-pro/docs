@@ -19,6 +19,7 @@ export default defineConfig({
           { text: '介绍', link: '/guide/introduction' },
           { text: '迭代计划', link: '/guide/plan' },
           { text: '开始使用', link: '/guide/getting-started' },
+          { text: '布局主题', link: '/guide/layout-theme' },
         ],
       },
     ],
