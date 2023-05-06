@@ -9,6 +9,7 @@ export default defineConfig({
     nav: [
       { text: '指引', link: '/guide/introduction' },
       { text: '预览地址', link: 'https://www.antdv-pro.com/' },
+      { text: '项目地址', link: 'https://github.com/antd-tiny-vue/antdv-admin-pro' },
     ],
 
     sidebar: [

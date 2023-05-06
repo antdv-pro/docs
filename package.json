@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"vitepress dev docs",
-    "build":"vitepress build docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs"
   },
   "keywords": [],
   "author": "aibayanyu",
   "license": "MIT",
   "devDependencies": {
+    "@mistjs/eslint-config-vue": "^0.0.5",
+    "@mistjs/tsconfig": "^1.1.1",
+    "@mistjs/tsconfig-vue": "^1.1.2",
+    "eslint": "^8.40.0",
+    "typescript": "^5.0.4",
     "vitepress": "1.0.0-alpha.75"
   }
 }
