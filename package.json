@@ -1,0 +1,16 @@
+{
+  "name": "docs-admin-pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"vitepress dev docs",
+    "build":"vitepress build docs"
+  },
+  "keywords": [],
+  "author": "aibayanyu",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.75"
+  }
+}
