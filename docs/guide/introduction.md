@@ -2,7 +2,11 @@
 
 ## 简介
 
-[AntdAdminPro](https://github.com/antd-tiny-vue/antdv-admin-pro)是一个基于Vue3、Vite4、ant-design-vue4、Pinia、UnoCSS和Typescript的一整套企业级中后台前端/设计解决方案，它延用了阿里react版本antd-pro的设计模式，使用了最新最流行的前端技术栈，内置了动态路由、多主题、多布局等功能，可以帮助你快速搭建企业级中后台产品原型。
+<div style="font-size: 36px;font-weight: 700;color: var(--vp-button-brand-bg);display: flex;align-items: center;justify-content: center;margin-bottom: 25px;">Antdv-Admin-Pro</div>
+
+<img src="/logo.svg" style="margin:auto;">
+
+[AntdvAdminPro](https://github.com/antd-tiny-vue/antdv-admin-pro)是一个基于Vue3、Vite4、ant-design-vue4、Pinia、UnoCSS和Typescript的一整套企业级中后台前端/设计解决方案，它延用了阿里react版本antd-pro的设计模式，使用了最新最流行的前端技术栈，内置了动态路由、多主题、多布局等功能，可以帮助你快速搭建企业级中后台产品原型。
 
 ## 特性
 

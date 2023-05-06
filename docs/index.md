@@ -6,9 +6,9 @@ hero:
   name: "Antd Admin Pro"
   text: "极简的后台管理系统"
   tagline: 基于 Vite4 + Vue3 + Unocss + Antdv4 + TS
-  # image:
-  #   src: /logo.svg
-  #   alt: antd admin pro
+  image:
+    src: /logo.svg
+    alt: antd admin pro
   actions:
     - theme: brand
       text: 开始使用
