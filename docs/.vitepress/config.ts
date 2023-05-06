@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Antd Admin Pro',
+  title: 'Antdv Admin Pro',
   description: 'Ant Design Vue admin pro',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
