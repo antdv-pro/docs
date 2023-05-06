@@ -75,7 +75,7 @@ pnpm install
 
 在webstorm中只需要配置eslint即可，在Settings中搜索：`Eslint`，然后做如下的配置：
 
-![idea](/images/webstorm.png)
+![idea](/webstorm.png)
 
 这样就完成了webstorm的保存项目自动格式化的功能。
 

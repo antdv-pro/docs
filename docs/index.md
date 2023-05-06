@@ -22,15 +22,15 @@ hero:
 features:
   - title: 高效快速
     icon: 
-      src: /images/shandian.svg
+      src: /shandian.svg
     details: vite4.x加持，开发、打包、热更新、热加载、热替换，一切都是那么的快
   - title: 预设样式
     icon:
-      src: /images/unocss.svg
+      src: /unocss.svg
     details: 内置了一套基于unocss的样式系统，原子化的样式，让你的样式更加简洁
   - title: TypeScript
     icon:
-      src: /images/typescript.svg
+      src: /typescript.svg
     details: 项目全量使用TypeScript，让你的代码更加规范，更加安全
 ---
 
