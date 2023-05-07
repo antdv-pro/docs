@@ -3,3 +3,5 @@ docs/.vitepress/cache
 node_modules
 *.log
 *.local
+.idea
+.vscode
