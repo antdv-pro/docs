@@ -32,6 +32,8 @@ export default defineConfig({
           { text: '迭代计划', link: '/guide/plan' },
           { text: '开始使用', link: '/guide/getting-started' },
           { text: '布局主题', link: '/guide/layout-theme' },
+          { text: '路由配置', link: '/guide/router-config' },
+          { text: '请求配置', link: '/guide/request' },
         ],
       },
     ],
@@ -39,5 +41,10 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/antdv-pro/antdv-admin-pro' },
     ],
+  },
+  vite: {
+    server: {
+      port: 6678,
+    },
   },
 })
