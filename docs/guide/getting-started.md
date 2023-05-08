@@ -22,7 +22,7 @@
 npm  i -g degit
 
 # 拉取代码
-degit antd-tiny-vue/antdv-admin-pro [your project name]
+degit antdv-pro/antdv-admin-pro [your project name]
 
 # 切换到项目目录
 cd [your project name]
