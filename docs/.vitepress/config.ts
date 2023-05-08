@@ -9,7 +9,19 @@ export default defineConfig({
     nav: [
       { text: '指引', link: '/guide/introduction' },
       { text: '预览地址', link: 'https://www.antdv-pro.com/' },
-      { text: '项目地址', link: 'https://github.com/antd-tiny-vue/antdv-admin-pro' },
+      {
+        text: '项目地址',
+        items: [
+          {
+            text: '完整工程',
+            link: 'https://github.com/antdv-pro/antdv-admin-pro',
+          },
+          {
+            text: '轻量版本',
+            link: 'https://github.com/antdv-pro/antdv-admin-pro/tree/mini',
+          },
+        ],
+      },
     ],
 
     sidebar: [
@@ -25,7 +37,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/antd-tiny-vue/antdv-admin-pro' },
+      { icon: 'github', link: 'https://github.com/antdv-pro/antdv-admin-pro' },
     ],
   },
 })
