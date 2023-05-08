@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Antd Admin Pro"
-  text: "极简的后台管理系统"
+  name: "Antdv Pro"
+  text: "通用的后台管理系统"
   tagline: 基于 Vite4 + Vue3 + Unocss + Antdv4 + TS
   image:
     src: /logo.svg
@@ -32,5 +32,18 @@ features:
     icon:
       src: /typescript.svg
     details: 项目全量使用TypeScript，让你的代码更加规范，更加安全
+  - title: Nitro Mock服务
+    icon:
+      src: /nitro.png
+    details: 项目使用Nitro作为Mock服务，无侵入式的Mock，让你的Mock更加简单
+  - title: 国际化
+    icon:
+      src: /geography.png
+    details: 提供了国际化的支持，满足项目的国际化需求
+  - title: 状态管理
+    icon:
+      src: /pinia.svg
+    details: 项目使用Pinia作为状态管理，使用起来更加简单
+
 ---
 
