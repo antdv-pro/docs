@@ -2,7 +2,7 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import './style.css'
-import Sponsor from '../components/Sponsor.vue'
+import Sponsor from '../components/sponsor.vue'
 export default {
   ...Theme,
   Layout: () => {
