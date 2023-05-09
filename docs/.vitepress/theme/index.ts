@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import './style.css'
+// @ts-expect-error this is component
 import Sponsor from '../components/sponsor.vue'
 export default {
   ...Theme,

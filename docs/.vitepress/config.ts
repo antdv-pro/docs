@@ -18,11 +18,11 @@ export default defineConfig({
         items: [
           {
             text: '完整工程',
-            link: 'https://github.com/antdv-pro/antdv-admin-pro',
+            link: 'https://github.com/antdv-pro/antdv-pro',
           },
           {
             text: '轻量版本',
-            link: 'https://github.com/antdv-pro/antdv-admin-pro/tree/mini',
+            link: 'https://github.com/antdv-pro/antdv-pro/tree/mini',
           },
         ],
       },
@@ -47,7 +47,7 @@ export default defineConfig({
       },
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/antdv-pro/antdv-admin-pro' },
+      { icon: 'github', link: 'https://github.com/antdv-pro/antdv-pro' },
     ],
   },
   vite: {

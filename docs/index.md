@@ -18,7 +18,7 @@ hero:
       link: /guide/introduction
     - theme: alt
       text: View on GitHub
-      link: https://github.com/antdv-pro/antdv-admin-pro
+      link: https://github.com/antdv-pro/antdv-pro
 features:
   - title: 高效快速
     icon: 
