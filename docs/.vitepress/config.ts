@@ -26,8 +26,11 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: '赞助',
+        link: '/other/sponsor',
+      },
     ],
-
     sidebar: [
       {
         text: '指引',
@@ -39,10 +42,10 @@ export default defineConfig({
           { text: '路由配置', link: '/guide/router-config' },
           { text: '请求配置', link: '/guide/request' },
           { text: 'mock服务', link: '/guide/server' },
+          { text: '国际化', link: '/guide/i18n-support' },
         ],
       },
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/antdv-pro/antdv-admin-pro' },
     ],

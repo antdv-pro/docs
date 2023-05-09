@@ -2,7 +2,7 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import './style.css'
-
+import Sponsor from '../components/Sponsor.vue'
 export default {
   ...Theme,
   Layout: () => {
@@ -10,7 +10,8 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp() {
+  enhanceApp(ctx) {
     // ...
+    ctx.app.component('Sponsor', Sponsor)
   },
 }

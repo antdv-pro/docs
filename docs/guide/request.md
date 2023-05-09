@@ -29,8 +29,11 @@ export interface LoginResultModel {
 }
 
 export const loginApi = (params: LoginParams) => {
-  return usePost<LoginParams, LoginResultModel>('/login', params)
+  return usePost<LoginResultModel, LoginParams>('/login', params)
+  // 如果不希望传参数的类型，
+  // 可以直接使用 usePost<LoginResultModel>('/login', params)既可
 }
+
 
 ```
 
@@ -50,3 +53,96 @@ const handleSubmit = async()=>{
 }
 </script>
 ```
+
+## 响应格式
+
+
+默认情况下，我们希望后端接口返回的所有数据格式应使用如下的格式：
+
+```ts
+export interface ResponseBody<T = any> {
+  code: number
+  data?: T // data作为一个可选参数，如果没有返回值，可以不传
+  msg: string
+}
+```
+
+如若格式不一致，可以在`utils/request.ts`中进行修改。
+
+
+我们建议使用`restful`的接口规范，例如：
+
+:::details 200
+
+处理所有请求成功的状态，其中响应的状态码也应为200。
+
+```json
+{
+  "code": 200,
+  "data": {
+    "token": "xxxxx"
+  },
+  "msg": "success"
+}
+```
+
+在这种情况下，我们还可以扩展一些常用的其他的code码，例如：
+
+我们实现轮询查询某个任务的状态，如果任务还在执行中，我们可以返回一个`100001`code码，表示任务还在执行中。
+
+```json
+{
+  "code": 100001,
+  "msg": "任务正在执行中"
+}
+```
+当code码为`100002`的时候，表示任务执行完成。
+
+```json
+{
+  "code": 100002,
+  "msg": "任务执行完成"
+}
+```
+就结束前端的轮询任务，等等
+
+:::
+
+:::details 401
+
+处理未授权的请求，例如未登录的请求，响应的状态码应为401。
+
+```json
+{
+  "code": 401,
+  "msg": "未登录"
+}
+```
+:::
+
+
+:::details 403
+
+其他错误的请求，例如处理请求登录接口账号密码不正确等等，响应的状态码应为403。
+
+```json
+{
+  "code": 403,
+  "msg": "账号或密码不正确"
+}
+```
+
+:::
+
+:::details 500
+
+处理服务器错误的请求，例如处理服务端网关报错的情况，响应的状态码应为500。
+
+```json
+{
+  "code": 500,
+  "msg": "服务器错误"
+}
+```
+
+:::
