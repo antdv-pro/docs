@@ -22,7 +22,7 @@ hero:
 features:
   - title: 高效快速
     icon: 
-      src: /shandian.svg
+      src: /vite.svg
     details: vite4.x加持，开发、打包、热更新、热加载、热替换，一切都是那么的快
   - title: 预设样式
     icon:
