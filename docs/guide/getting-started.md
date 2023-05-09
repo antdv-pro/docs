@@ -14,9 +14,25 @@
 3. 可以使用`fork`代码到自己的仓库进行开发。
 4. 可以使用`degit`进行下载(⭐️推荐)。
 
-我们这里只演示第四种的使用方式：
+如下：
 
-```bash
+::: code-group
+
+```shell [git clone]
+
+# clone代码
+git clone https://github.com/antdv-pro/antdv-pro.git [your project name]
+
+# 切换到项目目录
+cd [your project name]
+
+# 安装依赖
+
+pnpm install
+
+```
+
+```bash [degit下载]
 
 # 安装degit
 npm  i -g degit
@@ -31,7 +47,7 @@ cd [your project name]
 
 pnpm install
 ```
-
+:::
 ## 开发工具配置
 
 
