@@ -60,3 +60,19 @@ export default {
 
 ## 使用
 
+在使用国际化的时候，我们推荐使用我们封装过的`useI18nLocale`的`t`函数来实现国际化的配置。
+
+这是为了方便我们移除多语言后的兼容处理方式。
+
+```vue
+<script lang="ts" setup>
+const { t } = useI18nLocale()
+</script>
+
+<template>
+  <div>
+    <h1>{{ t('login.title') }}</h1>
+  </div>
+</template>
+```
+
