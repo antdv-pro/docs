@@ -48,8 +48,31 @@ cd [your project name]
 pnpm install
 ```
 :::
-## 开发工具配置
 
+## 包管理
+
+因为项目比较特殊，默认情况下我们使用了`monorepo`的多包管理的方式，所以我们使用`pnpm`进行包管理。
+
+如果你没有安装`pnpm`，参考[pnpm.io](https://pnpm.io/zh/)进行安装。
+
+### 安装依赖
+
+由于开启了多包管理，所以如果需要增加依赖安装的命令有些小小的不同。
+
+```bash
+## 给项目安装生产环境依赖
+pnpm add [package name] -w
+## 给项目安装开发环境依赖
+pnpm add [package name] -Dw
+## 给servers安装生产环境依赖
+pnpm add [package name] -F servers
+## 给packages安装生产环境依赖
+pnpm add [package name] -D -F packages
+```
+
+`[packahe name]`替换成你需要安装的包名即可。
+
+## 开发工具配置
 
 ### VSCode(⭐️推荐)
 
@@ -101,6 +124,9 @@ pnpm install
 antdv-pro
 ├─ public ## 静态资源文件夹
 ├─ scripts ## 工程脚本文件
+├─ themes ## 主题文件夹
+├─ servers ## nitro mock服务文件夹
+├─ types ## 类型声明文件夹
 ├─ src ## 主项目文件夹
 │  ├─ App.vue ## 组件入口
 │  ├─ assets  ## 静态资源文件夹
@@ -118,7 +144,6 @@ antdv-pro
 │  │  └─ static-routes.ts ## 静态路由
 │  ├─ stores ## pinia配置文件夹，默认支持自动导入
 │  └─ utils ## 工具函数
-├─ types ## 类型声明文件夹
 ├─ .env ## 默认环境配置文件
 ├─ .env.development ## 开发环境配置文件
 ├─ .eslintignore ## eslint忽略文件

@@ -35,7 +35,7 @@ const colorPrimary = computed(() => token.value.colorPrimary)
 ```
 
 
-## unocss的使用方案
+## uno用法
 
 
 对于unocss，我们也提供了一套相对简单的使用方案，这种方案是基于`css-var`的方案实现的，我们已经在`unocss`中进行了内置。
@@ -50,7 +50,7 @@ const colorPrimary = computed(() => token.value.colorPrimary)
 </span>
 ```
 
-目前内置的变量如下：
+目前并没有支持所有的变量，内置的变量如下：
 
 ::: details 变量名
 ```md
