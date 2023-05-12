@@ -69,9 +69,9 @@ pnpm install
 ```json
 {
   "editor.codeActionsOnSave": {
-        "source.fixAll": false, // 关闭全局自定义格式化
-        "source.fixAll.eslint": true, // 开启eslint保存自动格式化
-    },
+    "source.fixAll": false, // 关闭全局自定义格式化
+    "source.fixAll.eslint": true, // 开启eslint保存自动格式化
+  },
 }
 ```
 

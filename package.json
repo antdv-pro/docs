@@ -16,6 +16,7 @@
     "@mistjs/tsconfig": "^1.1.1",
     "@mistjs/tsconfig-vue": "^1.1.2",
     "eslint": "^8.40.0",
+    "taze": "^0.10.1",
     "typescript": "^5.0.4",
     "vitepress": "1.0.0-alpha.75"
   },
