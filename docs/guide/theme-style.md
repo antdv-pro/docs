@@ -40,7 +40,95 @@ const colorPrimary = computed(() => token.value.colorPrimary)
 
 对于unocss，我们也提供了一套相对简单的使用方案，这种方案是基于`css-var`的方案实现的，我们已经在`unocss`中进行了内置。
 
-```ts
 
+那么你可以通过类名的方式，直接进行使用，例如：
 
+```html
+<div bg-primary w-100px h-100px />
+<span c-primary>
+  这里是Antdv的主题效果
+</span>
 ```
+
+目前内置的变量如下：
+
+::: details 变量名
+```md
+primary
+success
+warning
+error
+info
+textBase
+bgBase
+text
+textSecondary
+textTertiary
+textQuaternary
+fill
+fillSecondary
+fillTertiary
+fillQuaternary
+bgLayout
+bgContainer
+bgElevated
+bgSpotlight
+border
+borderSecondary
+primaryBg
+primaryBgHover
+primaryBorder
+primaryBorderHover
+primaryHover
+primaryActive
+primaryTextHover
+primaryText
+primaryTextActive
+successBg
+successBgHover
+successBorder
+successBorderHover
+successHover
+successActive
+successTextHover
+successText
+successTextActive
+errorBg
+errorBgHover
+errorBorder
+errorBorderHover
+errorHover
+errorActive
+errorTextHover
+errorText
+errorTextActive
+warningBg
+warningBgHover
+warningBorder
+warningBorderHover
+warningHover
+warningActive
+warningTextHover
+warningText
+warningTextActive
+infoBg
+infoBgHover
+infoBorder
+infoBorderHover
+infoHover
+infoActive
+infoTextHover
+infoText
+infoTextActive
+bgMask
+white
+```
+:::
+
+你也可以根据自己的需求，进行自定义的变量，具体的使用方式可以参考[UnoCSS Theme](https://unocss.dev/config/theme)
+
+
+:::tip 注意
+
+变量列表是驼峰，但是在写类名的时候，需要使用`-`进行连接，例如`textSecondary`，那么对应的类名就是`bg-text-secondary`。
+:::
