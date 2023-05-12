@@ -39,6 +39,7 @@ export default defineConfig({
           { text: '迭代计划', link: '/guide/plan' },
           { text: '开始使用', link: '/guide/getting-started' },
           { text: '布局主题', link: '/guide/layout-theme' },
+          { text: '主题样式', link: '/guide/theme-style' },
           { text: '路由配置', link: '/guide/router-config' },
           { text: '请求配置', link: '/guide/request' },
           { text: 'mock服务', link: '/guide/server' },
