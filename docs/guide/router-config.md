@@ -109,3 +109,40 @@ const routerModules = import.meta.glob([
 如果当前的页面是一个外链的话，我们不需要填写`component`的值或者你可以填写一个`RouteView`，然后在`path`属性中配置一个全连接的地址，比如`https://www.baidu.com`。
 
 :::
+
+## 保活功能
+
+如果您想开启保活的功能，请确保正确配置了路由的`name`名称，这个名称是用于保活的唯一标识，如果您的路由没有配置`name`，那么保活功能将不会生效。
+
+例如：页面`test.vue`
+
+```vue
+<script lang="ts" setup>
+defineOptions({
+  name:"CommonTest"
+})
+</script>
+<template>
+  <div>
+    <h1>测试页面</h1>
+  </div>
+</template>
+```
+
+
+那么对应的路由配置信息如下：
+
+```ts
+{
+  path: '/test',
+  name: 'CommonTest',
+  component: () => import('~/pages/test.vue'),
+  meta: {
+    title: '测试页面',
+    icon: 'icon-test',
+    keepAlive: true,
+  },
+},
+```
+
+这样就能实现页面保活的功能了。
