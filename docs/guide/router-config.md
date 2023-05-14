@@ -91,6 +91,7 @@ const routerModules = import.meta.glob([
   '!~/pages/**/plugins',
   '!~/pages/**/tests',
   '!~/pages/**/test',
+  '!~/pages/**/locales',
   '!~/pages/common',
   '!~/pages/exception',
 ])

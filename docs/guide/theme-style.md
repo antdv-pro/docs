@@ -41,7 +41,10 @@ const colorPrimary = computed(() => token.value.colorPrimary)
 对于unocss，我们也提供了一套相对简单的使用方案，这种方案是基于`css-var`的方案实现的，我们已经在`unocss`中进行了内置。
 
 
-那么你可以通过类名的方式，直接进行使用，例如：
+
+### 使用
+
+在项目中，你可以通过`c-primary`、`bg-primary`等方式调用`ant-design-vue`的主题色变量。
 
 ```html
 <div bg-primary w-100px h-100px />
@@ -52,7 +55,8 @@ const colorPrimary = computed(() => token.value.colorPrimary)
 
 目前并没有支持所有的变量，内置的变量如下：
 
-::: details 变量名
+
+:::details 内置`css-var`变量
 ```md
 primary
 success
@@ -131,4 +135,5 @@ white
 :::tip 注意
 
 变量列表是驼峰，但是在写类名的时候，需要使用`-`进行连接，例如`textSecondary`，那么对应的类名就是`bg-text-secondary`。
+
 :::

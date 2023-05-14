@@ -157,3 +157,25 @@ antdv-pro
 ├─ vercel.json ## 发布到vercel配置文件
 └─ vite.config.ts ## vite配置文件
 ```
+
+
+## CURD实例
+
+在`/pages/dashbord/analytsis.vue`中，我们添加了一个`CRUD`的实例，这个实例是基于`axios`进行封装的，可以参考使用。
+
+### 移除实例
+
+如果不需要这个实例，可以直接将`components/analysis-modal.vue`和`components/interface.ts`文件删除，然后在`/pages/dashbord/analytsis.vue`中做如下的替换即可：
+
+```vue
+<script lang="ts" setup>
+
+</script>
+
+<template>
+  <div>
+    <h1>分析页</h1>
+  </div>
+</template>
+
+```
