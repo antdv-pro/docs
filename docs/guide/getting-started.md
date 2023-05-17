@@ -112,11 +112,20 @@ pnpm add [package name] -D -F packages
 
 使用最新版本的`webstorm`对`vue3 + ts5.x`的支持目前仍然存在一些问题，建议使用`VSCode`进行开发。
 
+### 配置ESLint
+
 在webstorm中只需要配置eslint即可，在Settings中搜索：`Eslint`，然后做如下的配置：
 
 ![idea](/webstorm.png)
 
 这样就完成了webstorm的保存项目自动格式化的功能。
+
+### 配置Volar
+
+在`webstorm EAP 2023.2`版本中，对`volar`提供了支持，我们可以通过配置`volar`来对`vue3`进行支持。
+
+![wbs-volar.png](..%2Fpublic%2Fwbs-volar.png)
+
 
 ## 目录结构
 
