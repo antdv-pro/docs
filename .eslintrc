@@ -1,3 +1,7 @@
 {
-    "extends":"@mistjs/eslint-config-vue"
+    "extends":"@mistjs/eslint-config-vue",
+    "rules": {
+        "vue/dot-location":"off",
+        "vue/comma-dangle":"off"
+    }
 }

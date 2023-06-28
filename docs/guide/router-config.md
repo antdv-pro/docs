@@ -18,18 +18,29 @@
 
 ```ts
 interface RouteMeta {
-    title?: string // 菜单标题
-    icon?: string // 菜单图标
-    hideInMenu?: boolean // 在菜单中隐藏
-    parentKeys?: string[] // 隐藏菜单配置选中的父级菜单
-    url?: string // iframe模式，会自动使用这个url
-    hideInBreadcrumb?: boolean // 在面包屑中隐藏
-    hideChildrenInMenu?: boolean // 在菜单中隐藏子节点
-    keepAlive?: boolean // 是否进行保活配置
-    target?: '_blank' | '_self' | '_parent' // 链接打开方式，当配置的path为全连接的时候
-    affix?: boolean // 开启多页签模式的情况下，是否作为固定的页签展示
-  }
+  title?: string // 菜单标题
+  icon?: string // 菜单图标
+  hideInMenu?: boolean // 在菜单中隐藏
+  parentKeys?: string[] // 隐藏菜单配置选中的父级菜单
+  url?: string // iframe模式，会自动使用这个url
+  hideInBreadcrumb?: boolean // 在面包屑中隐藏
+  hideChildrenInMenu?: boolean // 在菜单中隐藏子节点
+  keepAlive?: boolean // 是否进行保活配置
+  target?: '_blank' | '_self' | '_parent' // 链接打开方式，当配置的path为全连接的时候
+  affix?: boolean // 开启多页签模式的情况下，是否作为固定的页签展示
+  access?: (string | number)[] // 权限管理，如果当前用户没有这个权限，那么将不会显示这个菜单
+}
 ```
+
+:::tip 小贴士
+
+默认情况下，我们使用的是后端api接口加载菜单的形式，如果你想要通过前端进行加载的话，那么你需要在`.env`环境中配置一下`VITE_APP_LOAD_ROUTE_WAY`的加载方式
+
+默认是`BACKEND`表示后端加载菜单和路由，改用`FRONTEND`后会通过`src/router/dynamic-routes.ts`去加载菜单和路由的信息。
+
+此功能支持是在`release@0.0.13`以及以后支持的。
+
+:::
 
 ## 后端菜单
 
@@ -119,9 +130,10 @@ const routerModules = import.meta.glob([
 ```vue
 <script lang="ts" setup>
 defineOptions({
-  name:"CommonTest"
+  name: 'CommonTest',
 })
 </script>
+
 <template>
   <div>
     <h1>测试页面</h1>

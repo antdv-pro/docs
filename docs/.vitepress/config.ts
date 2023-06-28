@@ -12,7 +12,6 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '指引', link: '/guide/introduction' },
-      { text: '预览地址', link: 'https://www.antdv-pro.com/' },
       {
         text: '项目地址',
         items: [
@@ -24,12 +23,31 @@ export default defineConfig({
             text: '轻量版本',
             link: 'https://github.com/antdv-pro/antdv-pro/tree/mini',
           },
+          { text: '预览地址', link: 'https://www.antdv-pro.com/' },
         ],
       },
       {
-        text: '赞助',
-        link: '/other/sponsor',
+        text: '社区',
+        items: [
+          {
+            text: 'QQ群：939791772',
+            link: 'https://qm.qq.com/cgi-bin/qm/qr?k=dZMUtNNxv0BLxQwOoZwGQ7nR24GT-24s&authKey=F2Rpv5Gez5nD7Pr5HrYalfd3J6T9PEcu2TJ/femkp9ZQF+YhlvvYyrvJone8BoeT&noverify=0',
+          },
+          {
+            text: '微信：aibayanyu2022',
+            link: 'https://u.wechat.com/MASIsAa8353Hi4e59-aBPaA',
+          },
+          {
+            text: 'discord',
+            link: 'https://discord.gg/tPb4G6gXmm',
+          },
+          {
+            text: '赞助',
+            link: '/other/sponsor',
+          },
+        ],
       },
+
     ],
     sidebar: [
       {
@@ -42,6 +60,7 @@ export default defineConfig({
           { text: '主题样式', link: '/guide/theme-style' },
           { text: '路由配置', link: '/guide/router-config' },
           { text: '请求配置', link: '/guide/request' },
+          { text: '权限管理', link: '/guide/access' },
           { text: 'mock服务', link: '/guide/server' },
           { text: '国际化', link: '/guide/i18n-support' },
         ],

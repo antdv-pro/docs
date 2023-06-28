@@ -2,15 +2,18 @@
   "name": "docs-admin-pro",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "aibayanyu",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
-  "keywords": [],
-  "author": "aibayanyu",
-  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
   "devDependencies": {
     "@mistjs/eslint-config-vue": "^0.0.5",
     "@mistjs/tsconfig": "^1.1.1",
@@ -19,8 +22,5 @@
     "taze": "^0.10.1",
     "typescript": "^5.0.4",
     "vitepress": "1.0.0-alpha.75"
-  },
-  "dependencies": {
-    "vue": "^3.2.47"
   }
 }
