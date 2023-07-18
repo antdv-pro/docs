@@ -29,7 +29,7 @@ export default {
   colorWeak: false, // 设置色弱模式
   multiTab: true, // 设置多页签模式
   multiTabFixed: false, // 设置固定多页签
-  headerHeight: 48, // 设置头部高度 
+  headerHeight: 48, // 设置头部高度
   copyright: '爱吧烟雨2023', // 设置底部版权信息
 }
 ```

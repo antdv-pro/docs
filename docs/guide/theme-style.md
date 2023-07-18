@@ -10,7 +10,6 @@
 const { token } = useAntdToken()
 
 const colorPrimary = computed(() => token.value.colorPrimary)
-
 ```
 
 
@@ -136,4 +135,63 @@ white
 
 变量列表是驼峰，但是在写类名的时候，需要使用`-`进行连接，例如`textSecondary`，那么对应的类名就是`bg-text-secondary`。
 
+:::
+
+
+## 样式降级
+
+对于一些低版本的浏览器，对于`cssinjs`的支持并不是很好，所以我们需要对`css`进行降级处理。
+
+通过在`App.vue`中增加`hash-priority="high"`的方式来降级：
+
+```diff
++ <a-style-provider hash-priority="high">
+    <TokenProvider>
+      <RouterView />
+    </TokenProvider>
++ </a-style-provider>
+
+```
+
+降级后会导致`unocss`的样式比`antd`的样式层级要低，所以我们还需要对`unocss`进行特殊的处理：
+
+首先安装：`pnpm add uno-prefix-variant -Dw`插件。
+
+在`unocss.config.ts`中增加如下配置：
+
+```diff
+// ...
++ import { unoPrefixVariant } from 'uno-prefix-variant'
+
+export default defineConfig({
+  // ...
++   variants: [
++    unoPrefixVariant({
++      prefixCls: '#app',
++    }),
++  ]
+  // ...
+})
+
+```
+
+重启一下工程就能正常使用了。
+
+:::tip 小贴士
+对于自己重写`ant-design-vue`的样式，可能也会出现不生效的问题，
+需要提升一下类名的等级，你可以通过给你自己的类名的前面添加一个`#app 类名`的形式来保证你写的优先级高于`ant-design-vue`中内置的样式。
+
+如下：
+```less
+#app{
+  .test{
+    color:red;
+  }
+  .test1{
+    color: green;
+  }
+
+}
+
+```
 :::
