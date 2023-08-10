@@ -13,6 +13,7 @@ export default {
   },
   enhanceApp(ctx) {
     // ...
+    Theme.enhanceApp(ctx)
     ctx.app.component('Sponsor', Sponsor)
   },
 }

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
+  "type": "module",
   "license": "MIT",
   "author": "aibayanyu",
   "main": "index.js",
@@ -12,7 +13,7 @@
     "preview": "vitepress preview docs"
   },
   "dependencies": {
-    "vue": "^3.2.47"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@mistjs/eslint-config-vue": "^0.0.5",
@@ -21,6 +22,6 @@
     "eslint": "^8.40.0",
     "taze": "^0.10.1",
     "typescript": "^5.0.4",
-    "vitepress": "1.0.0-alpha.75"
+    "vitepress": "1.0.0-rc.4"
   }
 }

@@ -121,7 +121,11 @@ const routerModules = import.meta.glob([
 
 :::
 
-## 保活功能
+## 保活功能<Badge type="danger" text="更新" />
+
+自<Badge type="tip" text="^0.0.19" />版本开始，保活功能不依赖路由的`name`名称。
+
+:::details v0.0.19以前版本配置
 
 如果您想开启保活的功能，请确保正确配置了路由的`name`名称，这个名称是用于保活的唯一标识，如果您的路由没有配置`name`，那么保活功能将不会生效。
 
@@ -158,3 +162,6 @@ defineOptions({
 ```
 
 这样就能实现页面保活的功能了。
+
+
+:::
