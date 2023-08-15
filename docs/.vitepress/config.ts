@@ -35,7 +35,7 @@ export default defineConfig({
           },
           {
             text: '微信：aibayanyu2022',
-            link: 'https://u.wechat.com/MASIsAa8353Hi4e59-aBPaA',
+            link: 'https://oss.lingyu.org.cn/api/v1/buckets/cdn/objects/download?preview=true&prefix=aW1hZ2VzL3d4LWdyb3VwLmpwZw==&version_id=null',
           },
           {
             text: 'discord',
