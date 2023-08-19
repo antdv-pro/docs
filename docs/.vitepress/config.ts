@@ -35,7 +35,7 @@ export default defineConfig({
           },
           {
             text: '微信：aibayanyu2022',
-            link: 'https://oss.lingyu.org.cn/api/v1/buckets/cdn/objects/download?preview=true&prefix=aW1hZ2VzL3d4LWdyb3VwLmpwZw==&version_id=null',
+            link: 'https://git.lingyu.org.cn/yanyu/images/raw/branch/main/wx-group.jpg',
           },
           {
             text: 'discord',
