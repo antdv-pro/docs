@@ -34,7 +34,6 @@ export const loginApi = (params: LoginParams) => {
   // 可以直接使用 usePost<LoginResultModel>('/login', params)既可
 }
 
-
 ```
 
 在页面中我们可以直接使用这个请求接口：
@@ -53,7 +52,76 @@ const handleSubmit = async()=>{
 }
 </script>
 ```
+## 全局请求loading使用
+全局loading相关配置可在`utils/loading.ts`中自行更改
 
+如下：
+
+```ts
+import { useLoading } from '@/composables/base-loading'
+import { LoadingEnum } from '~#/loadingEnum'
+/**
+ * 全局loading配置
+ * @param spin loading样式
+ * @param minTime loading最短时间
+ * @param modal loading遮罩是否开启
+ * @param background loading背景
+ * @param textColor loading文字颜色
+ * @param color loading文字
+ */
+const loading = useLoading({
+  spin: LoadingEnum.CHASE,// PULSE、RECT 、PLANE、CUBE、PRELOADER、 CHASE 、DOT
+  minTime: 500,
+  // text: '正在加载中...'
+  // textColor: '#79bbff'
+  // background: 'rgba(0, 0, 0, .5)'
+  // modal: true
+})
+
+export class AxiosLoading {
+  loadingCount: number
+  constructor() {
+    this.loadingCount = 0
+  }
+
+  addLoading() {
+    if (this.loadingCount === 0)
+      loading.open()
+
+    this.loadingCount++
+  }
+
+  closeLoading() {
+    if (this.loadingCount > 0) {
+      if (this.loadingCount === 1)
+        loading.close()
+      this.loadingCount--
+    }
+  }
+}
+```
+
+如何使用？下面是一个简单的例子：
+
+例如我们在`api/common/login.ts`中的`login`接口使用,只需config配置中开启loading即可。
+
+```ts
+export interface LoginParams {
+  username: string
+  password: string
+}
+
+export interface LoginResultModel {
+  token: string
+  // 是否开启全局请求loading
+  loading: true
+}
+
+export const loginApi = (params: LoginParams) => {
+  return usePost<LoginResultModel, LoginParams>('/login', params)
+}
+
+```
 ## 响应格式
 
 
