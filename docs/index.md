@@ -19,6 +19,9 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/antdv-pro/antdv-pro
+    - theme: alt
+      text: 国内镜像
+      link: https://gitee.com/antdv-pro/antdv-pro
 features:
   - title: 高效快速
     icon: 
