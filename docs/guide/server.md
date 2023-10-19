@@ -23,7 +23,11 @@
 
 自己开发了后端服务，不需要`nitro`了，那么如何移除呢？
 
-可以直接删除`servers`目录，然后再删除掉`pnpm-workspace.yaml`中的`servers`配置，重新`pnpm install`即可完成移除。
+可以直接删除`servers`目录，
+
+> 自 <Badge type="info" text="v1.0.0-beta.1" />开始不在依赖多包管理模式，之前的版本需要删除掉`pnpm-workspace.yaml`中的`servers`配置
+
+重新`pnpm install`即可完成移除。
 
 ## 混合使用
 

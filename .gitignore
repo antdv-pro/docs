@@ -5,3 +5,4 @@ node_modules
 *.local
 .idea
 .vscode
+.DS_Store

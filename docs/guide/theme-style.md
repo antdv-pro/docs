@@ -155,7 +155,7 @@ white
 
 降级后会导致`unocss`的样式比`antd`的样式层级要低，所以我们还需要对`unocss`进行特殊的处理：
 
-首先安装：`pnpm add uno-prefix-variant -Dw`插件。
+首先安装：`pnpm add uno-prefix-variant -D`插件。
 
 在`unocss.config.ts`中增加如下配置：
 

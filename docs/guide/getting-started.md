@@ -51,6 +51,8 @@ pnpm install
 
 ## 包管理
 
+:::details 自<Badge type="tip" text="v1.0.0-beta" />版本开始废弃，你可以使用任何包工具安装
+
 因为项目比较特殊，默认情况下我们使用了`monorepo`的多包管理的方式，所以我们使用`pnpm`进行包管理。
 
 如果你没有安装`pnpm`，参考[pnpm.io](https://pnpm.io/zh/)进行安装。
@@ -71,6 +73,7 @@ pnpm add [package name] -D -F packages
 ```
 
 `[packahe name]`替换成你需要安装的包名即可。
+:::
 
 ## 开发工具配置
 
@@ -91,10 +94,45 @@ pnpm add [package name] -D -F packages
 
 ```json
 {
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll": false, // 关闭全局自定义格式化
-    "source.fixAll.eslint": true, // 开启eslint保存自动格式化
+    "source.fixAll": "explicit",
+    "source.organizeImports": "never"
   },
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
+  ]
 }
 ```
 
@@ -124,7 +162,7 @@ pnpm add [package name] -D -F packages
 
 在`webstorm EAP 2023.2`版本中，对`volar`提供了支持，我们可以通过配置`volar`来对`vue3`进行支持。
 
-![wbs-volar.png](..%2Fpublic%2Fwbs-volar.png)
+![wbs-volar.png](/wbs-volar.png)
 
 
 ## 目录结构
