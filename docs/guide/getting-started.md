@@ -160,7 +160,7 @@ pnpm add [package name] -D -F packages
 
 ### 配置Volar
 
-在`webstorm EAP 2023.2`版本中，对`volar`提供了支持，我们可以通过配置`volar`来对`vue3`进行支持。
+在`webstorm 2023.2`以及更高的版本中，对`volar`提供了支持，我们可以通过配置`volar`来对`vue3`进行支持。
 
 ![wbs-volar.png](/wbs-volar.png)
 

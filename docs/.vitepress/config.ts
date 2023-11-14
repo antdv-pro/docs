@@ -13,6 +13,9 @@ export default defineConfig({
     nav: [
       { text: '指引', link: '/guide/introduction' },
       {
+        text: 'Mist脚手架', link: '/mist/',
+      },
+      {
         text: '项目地址',
         items: [
           {
@@ -49,24 +52,40 @@ export default defineConfig({
       },
 
     ],
-    sidebar: [
-      {
-        text: '指引',
-        items: [
-          { text: '介绍', link: '/guide/introduction' },
-          { text: '更新日志', link: '/guide/change-log' },
-          { text: '迭代计划', link: '/guide/plan' },
-          { text: '开始使用', link: '/guide/getting-started' },
-          { text: '布局主题', link: '/guide/layout-theme' },
-          { text: '主题样式', link: '/guide/theme-style' },
-          { text: '路由配置', link: '/guide/router-config' },
-          { text: '请求配置', link: '/guide/request' },
-          { text: '权限管理', link: '/guide/access' },
-          { text: 'mock服务', link: '/guide/server' },
-          { text: '国际化', link: '/guide/i18n-support' },
-        ],
-      },
-    ],
+    sidebar: {
+      '/guide/': [
+        {
+          text: '指引',
+          items: [
+            { text: '介绍', link: '/guide/introduction' },
+            { text: '更新日志', link: '/guide/change-log' },
+            { text: '迭代计划', link: '/guide/plan' },
+            { text: '开始使用', link: '/guide/getting-started' },
+            { text: '布局主题', link: '/guide/layout-theme' },
+            { text: '主题样式', link: '/guide/theme-style' },
+            { text: '路由配置', link: '/guide/router-config' },
+            { text: '请求配置', link: '/guide/request' },
+            { text: '权限管理', link: '/guide/access' },
+            { text: 'mock服务', link: '/guide/server' },
+            { text: '国际化', link: '/guide/i18n-support' },
+          ],
+        },
+      ],
+      '/mist/': [
+        {
+          text: '简介',
+          link: '/mist/',
+        },
+        {
+          text: '配置',
+          link: '/mist/config',
+        },
+        {
+          text: '移除',
+          link: '/mist/remove',
+        },
+      ],
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/antdv-pro/antdv-pro' },
       {
