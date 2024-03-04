@@ -2,8 +2,8 @@
 
 ## 环境要求
 
-- [NodeJS](https://nodejs.org/en) >= 16.0.0
-- [Pnpm](https://pnpm.io/zh/)(建议最新版本) >= 7.0.0
+- [NodeJS](https://nodejs.org/en) >= 18.0.0
+- [Pnpm](https://pnpm.io/zh/)(建议最新版本) >= 8.0.0
 - [Git](https://git-scm.com/)
 
 
@@ -83,8 +83,9 @@ pnpm add [package name] -D -F packages
 本项目推荐使用VSCode进行开发，需要安装的插件如下：
 
 - [Vue Language Features (Volar) ](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Vue服务插件
-- [TypeScript Vue Plugin (Volar) ](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) - Vue 的TS服务插件
-- [Volar Takeover Mode](https://cn.vuejs.org/guide/typescript/overview.html#volar-takeover-mode) - Volar Takeover 模式配置
+- [TypeScript Vue Plugin (Volar) ](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) - Vue 的TS服务插件(vue-tsc < 2.0.0)
+- [Volar Labs](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volarjs-labs) - Volar Labs(vue-tsc@2.0.4)
+- [Volar Takeover Mode](https://cn.vuejs.org/guide/typescript/overview.html#volar-takeover-mode) - 低于2.x的版本 Volar Takeover 模式配置
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 代码规范工具
 - [UnoCSS](https://marketplace.visualstudio.com/items?itemName=antfu.unocss) - unocss 写法提示插件
 
@@ -136,13 +137,13 @@ pnpm add [package name] -D -F packages
 }
 ```
 
-开启后在修改代码后保存，会自动格式化代码。如果不能格式化，请检查是否与全局配置的`setting.json`文件冲突。
+开启后在修改代码后保存，会自动格式化代码。如果不能格式化，请检查是否与全局配置的`settings.json`文件冲突。
 
 2. 代码爆红问题
 
 如果你的代码爆红，可以尝试以下几种方式解决：
 
-* 没有开启volar takeover模式。
+* 没有开启volar takeover模式(vue-tsc < 2.x)。
 * 没有禁用vetur插件。
 * 重启vscode进入任意一个vue文件查看右下角是否显示`vue takeover`的标识，不显示代表没有配置成功
 
